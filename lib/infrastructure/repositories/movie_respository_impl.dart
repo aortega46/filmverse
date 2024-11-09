@@ -8,7 +8,7 @@ class MovieRespositoryImpl extends MoviesRepository {
   MovieRespositoryImpl(this.datasource);
 
   @override
-  Future<List<Movie>> getNowPlaying({int pages = 1}) {
-    return datasource.getNowPlaying(pages: pages);
+  Future<List<Movie>> getNowPlaying({int page = 1}) {
+    return datasource.getNowPlaying(page: page);
   }
 }
