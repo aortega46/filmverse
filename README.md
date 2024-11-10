@@ -1,4 +1,4 @@
-# cinemapedia
+# filmverse
 
 # Dev
 1. Copiar el .env.template y renombrarlo a .env

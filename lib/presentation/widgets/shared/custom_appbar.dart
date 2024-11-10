@@ -22,7 +22,7 @@ class CustomAppbar extends StatelessWidget {
               ),
               const SizedBox(width: 5),
               Text(
-                'Cinemapedia',
+                'Filmverse',
                 style: titleStyle,
               ),
               const Spacer(),

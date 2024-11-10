@@ -1,9 +1,9 @@
-import 'package:cinemapedia/conifg/constants/environment.dart';
-import 'package:cinemapedia/domain/datasources/movies_datasource.dart';
-import 'package:cinemapedia/domain/entities/movie.dart';
-import 'package:cinemapedia/infrastructure/mappers/movie_mapper.dart';
-import 'package:cinemapedia/infrastructure/models/moviedb/moviedb_response.dart';
 import 'package:dio/dio.dart';
+import 'package:filmverse/conifg/constants/environment.dart';
+import 'package:filmverse/domain/datasources/movies_datasource.dart';
+import 'package:filmverse/domain/entities/movie.dart';
+import 'package:filmverse/infrastructure/mappers/movie_mapper.dart';
+import 'package:filmverse/infrastructure/models/moviedb/moviedb_response.dart';
 
 class MoviedbDatasource extends MoviesDatasource {
   final dio = Dio(BaseOptions(
