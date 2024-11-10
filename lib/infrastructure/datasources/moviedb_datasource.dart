@@ -3,7 +3,7 @@ import 'package:filmverse/conifg/constants/environment.dart';
 import 'package:filmverse/domain/datasources/movies_datasource.dart';
 import 'package:filmverse/domain/entities/movie.dart';
 import 'package:filmverse/infrastructure/mappers/movie_mapper.dart';
-import 'package:filmverse/infrastructure/models/moviedb/moviedb_response.dart';
+import 'package:filmverse/infrastructure/models/models.dart';
 
 class MoviedbDatasource extends MoviesDatasource {
   final dio = Dio(BaseOptions(
@@ -63,5 +63,19 @@ class MoviedbDatasource extends MoviesDatasource {
     );
 
     return _jsonToMoives(response.data);
+  }
+
+  @override
+  Future<Movie> getMovieById(String id) async {
+    final response = await dio.get('/movie/$id');
+    if (response.statusCode != 200)
+      throw Exception('Movie with id: $id not found');
+
+    final movieDB = MovieDetails.fromJson(response.data);
+
+    // TODO
+    // final Movie movie = MovieMapper(),
+
+    throw UnimplementedError();
   }
 }
